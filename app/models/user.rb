@@ -10,8 +10,13 @@ class User < ActiveRecord::Base
 						   },
 			               :storage => :s3,
 				       :s3_credentials => "#{RAILS_ROOT}/config/amazon_s3.yml",
-                                       :path => ":attachment/:id/:style.:extension",
-				       :bucket => 'paperclip-demo'			   
+				       :s3_permissions => "public-read", 
+                                       #~ :path => ":attachment/:id/:style.:extension",
+				       :url =>  "/images/:id/:style.:extension" ,
+				       :bucket => 'Mawhiba'	
+
+
+    
                                   
 	 
 	 validates_presence_of :name 
