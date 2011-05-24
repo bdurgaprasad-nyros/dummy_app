@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 				       :s3_credentials => "#{RAILS_ROOT}/config/amazon_s3.yml",
 				       :s3_permissions => "public-read", 
                                        #~ :path => ":attachment/:id/:style.:extension",
-				       :url =>  "/images/:id/:style.:extension" ,
+				       :url =>  "images/:id/:style.:extension" ,
 				       :bucket => 'Mawhiba'	
 
 
